@@ -31,7 +31,7 @@ const mylist = [
     "max": 26,
     "min": 18,
     "description": "Thunderstorms",
-    "condition": "storm"
+    "condition": "clear_day"
   },
   {
     "date": "03-19",
