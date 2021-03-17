@@ -8,4 +8,9 @@ export default StyleSheet.create({
     backgroundColor: '#E8F0FF',
     paddingTop: '5%',
   },
+
+  list: {
+    marginTop: 10,
+    marginLeft: 10,
+  }
 });

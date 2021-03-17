@@ -21,5 +21,5 @@ export default StyleSheet.create({
       width: 1,
       height: 3
     }
-  },
+  }
 });
