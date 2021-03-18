@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tempo",
-    "slug": "tempo",
+    "name": "devTempo",
+    "slug": "dev-tempo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lucasrodrigues.devtemp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.lucasrodrigues.devtemp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
