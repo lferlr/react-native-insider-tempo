@@ -4,7 +4,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    padding: '5%',
+    padding: '1%',
+    marginTop: '5%',
     backgroundColor: '#E8F0FF'
   },
 
@@ -42,5 +43,32 @@ export default StyleSheet.create({
     height: 50,
     borderTopRightRadius: 8,
     borderBottomRightRadius: 8
+  }, 
+
+  header: {
+    marginTop: '5%',
+    width: '90%',
+    paddingTop: '5%',
+    paddingBottom: '5%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderRadius: 8
+  }, 
+
+  date: {
+    color: '#FFF',
+    fontSize: 16
+  },
+
+  city: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff'
+  },
+
+  temp: {
+    color: '#FFF',
+    fontSize: 80,
+    fontWeight: 'bold'
   }
 });
