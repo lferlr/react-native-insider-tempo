@@ -4,14 +4,17 @@ export default StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     marginLeft: 12,
+    marginBottom: 15,
+    marginTop: 15,
     borderRadius: 8,
     paddingTop: 10,
     paddingBottom: 10,
-    paddingLeft: 14,
-    paddingRight: 14,
-    justifyContent: 'space-between',
+    paddingLeft: 15,
+    paddingRight: 15,
+    justifyContent: 'space-around',
     alignItems: 'center'
   },
+  
   date: {
     fontSize: 14,
   },

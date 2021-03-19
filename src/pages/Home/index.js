@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView, FlatList } from 'react-native';
+import * as Location from 'expo-location';
 
 import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 import Conditions from '../../components/Conditions';
 import Forecast from '../../components/Forecast';
 
+import api, { key }from '../../services/api';
 import styles from './styles';
 
 const mylist = [
@@ -92,6 +94,45 @@ const mylist = [
 ];
 
 export default function Home(){
+  const [errorMsg, setErrorMsg] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [weather, setWeather] = useState([]);
+  const [icon, setIcon] = useState({ name: 'cloud', color: '#FFFFFF' });
+  const [background, setBackground] = useState(['#1ec9ff', '#97c1ff' ]);
+
+  useEffect(() => {
+    
+    (async () => {
+      let { status } = await Location.requestPermissionsAsync();
+
+      if(status !== 'granted') {
+        setErrorMsg('Permissão negada para acessar localização');
+        setLoading(false);
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      //console.log(location);
+
+      const response = await api.get(`/weather?key=${key}&lat=${location.coords.latitude}&lon=${location.coords.longitude}`);
+
+      console.log(response);
+
+    })();
+
+  }, [])
+
+  // if(status !== 'granted') {
+  //   setErrorMsg('Permissão negada para acessar localização');
+  //   setLoading(false);
+  //   return;
+  // }
+  
+  // let location = await Location.getCurrentPositionAsync({});
+  // console.log(location);
+
+  // console.log(status);
+
   return(
     <SafeAreaView style={styles.container}>
       <Menu />
