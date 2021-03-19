@@ -9,8 +9,8 @@ export default StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    left: 15,
-    top: 40,
+    left: 10, //15
+    top: 20, //40
     borderTopRightRadius: 30,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
